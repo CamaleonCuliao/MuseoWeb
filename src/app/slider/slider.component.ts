@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { url } from 'inspector';
 import { NgForOf } from "@angular/common";
 
@@ -7,9 +7,9 @@ import { NgForOf } from "@angular/common";
   standalone: true,
   imports: [NgForOf],
   templateUrl: './slider.component.html',
-  styleUrl: './slider.component.css'
 })
 export class SliderComponent {
+
   imagenes = [
     { url: "assets/img/museos/arqAlicante.jpg", titulo: "Museo de arqueologia de Alicante" },
     { url: "assets/img/museos/arqMurcia.jpg", titulo: "Museo de arqueologia de Murcia" },
@@ -26,4 +26,5 @@ export class SliderComponent {
   anterior() {
     this.index = (this.index - 1 + this.imagenes.length) % this.imagenes.length;
   }
+  
 }

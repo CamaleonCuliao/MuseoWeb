@@ -1,45 +1,46 @@
 <style>
-  section{
+  .contenedor {
+    background-color: #faf7f3;
+
     display: flex;
     flex-direction: column;
   }
 
   app-header {
+    position: sticky;
+    top: 0;
     height: 10vh;
   }
 
-  main{
+  main {
     width: 100%;
-    height: 80vh;
 
     display: flex;
     flex-direction: column;
-
-    overflow-y: scroll;
   }
 
-  section{
-    height: 100%;
-  }
-
-  app-slider{
-    height: 40%;
-  }
-
-  app-footer{
+  app-footer {
     height: 10vh;
+  }
+
+  .museo {
+    width: 300px;
+    height: 200px;
+    background: url('../assets/img/museos/arqMurcia.jpg') no-repeat;
+    object-fit: contain;
   }
 </style>
 
-<section>
+<section class="contenedor">
   <app-header></app-header>
 
   <main>
-    <section>
-      <app-slider></app-slider>
-    </section>
+    <app-slider></app-slider>
+
+    <div class="museo">
+      
+    </div>
   </main>
 
   <app-footer></app-footer>
 </section>
-
