@@ -19,15 +19,24 @@
     flex-direction: column;
   }
 
-  app-footer {
-    height: 10vh;
+  .cercanos_container {
+    text-align: center;
+    margin-top: 5%;
   }
 
-  .museo {
-    width: 300px;
-    height: 200px;
-    background: url('../assets/img/museos/arqMurcia.jpg') no-repeat;
-    object-fit: contain;
+  .cercanos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  app-footer {
+    height: 10vh;
   }
 </style>
 
@@ -37,10 +46,16 @@
   <main>
     <app-slider></app-slider>
 
-    <div class="museo">
-      
-    </div>
+    <section class="cercanos_container">
+      <h1>Museos cerca de ti</h1>
+      <section class="cercanos">
+        <app-caja *ngFor="let cant of cantidad"></app-caja>
+      </section>
+    </section>
+
   </main>
+
+
 
   <app-footer></app-footer>
 </section>
