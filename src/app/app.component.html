@@ -7,8 +7,6 @@
   }
 
   app-header {
-    position: sticky;
-    top: 0;
     height: 10vh;
   }
 
@@ -44,18 +42,15 @@
   <app-header></app-header>
 
   <main>
-    <app-slider></app-slider>
 
     <section class="cercanos_container">
       <h1>Museos cerca de ti</h1>
       <section class="cercanos">
-        <app-caja *ngFor="let cant of cantidad"></app-caja>
+
       </section>
     </section>
 
   </main>
-
-
 
   <app-footer></app-footer>
 </section>
