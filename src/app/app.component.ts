@@ -1,23 +1,26 @@
-import { Component } from '@angular/core';
-import { NgForOf } from "@angular/common";
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { SliderComponent } from './slider/slider.component';
-import { CajaComponent } from './caja/caja.component';
-//import { SwiperModule } from '../../node_modules/swiper/swiper';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, SliderComponent, CajaComponent, NgForOf, /*SwiperModule*/],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'web-museo';
+export class AppComponent implements OnInit{
+  title = "Indice";
 
-  cantidad = [
-    "cosa", "cosa", "cosa", "cosa"
-  ];
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit(){
+    this.apiService.loadMuseos()
+    this.apiService.loadMonumentos()
+    this.apiService.loadExposiciones()
+    this.apiService.loadVisitass()
+  }
+  
 }

@@ -1,41 +1,94 @@
 <header>
-    <h1>MuseumWeb</h1>
-
-    <ul>
-        <li>Inicio</li>
-        <li>Museos</li>
-        <li>Yacimientos</li>
-        <li>Exposiciones</li>
-        <li>Noticias</li>
-        <li>Contacto</li>
-    </ul>
+    <h1 routerLink="">MuseumWeb</h1>
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav [class.open]="menuAbierto">
+        <ul>
+            <li routerLink="">Inicio</li>
+            <li routerLink="/detalles-museo">Museos</li>
+            <li>Yacimientos</li>
+            <li>Exposiciones</li>
+            <li>Noticias</li>
+            <li>Contacto</li>
+            <li routerLink="/registro">Crear cuenta</li>
+        </ul>
+    </nav>
 </header>
 
 <style>
-    header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        background-color: #faf7f3;
+:host {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
 
-        height: 100%;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #faf7f3;
+    padding: 0 1rem;
+    height: 56px;    
+}
 
-    ul{
-        display: flex;
-        margin: 0;
-        margin-left: auto;
-        margin-right: 5%;
-    }
+h1 {
+    margin: 0;
+    font-size: 20px;
+}
 
-    li{
-        padding: 5px;
-        list-style: none;
-    }
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
 
-    h1{
-        margin: 0;
-        margin-left: 5%;
-    }
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #1a1a1a;
+    border-radius: 2px;
+}
+
+nav {
+    display: none;
+    background-color: #D0D5ED;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+
+    z-index: 10000; /* 👈 para que el menú no quede debajo */
+}
+
+nav.open {
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+li {
+    padding: 12px 1.25rem;
+    font-size: 15px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+li:last-child {
+    border-bottom: none;
+}
 </style>

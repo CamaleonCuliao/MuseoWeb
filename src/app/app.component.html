@@ -4,58 +4,34 @@
 
     display: flex;
     flex-direction: column;
+
+    text-emphasis: 100%;
+
+    height: 100vh;
   }
 
   app-header {
     position: sticky;
     top: 0;
-    height: 10vh;
+    height: 10%;
   }
 
-  main {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cercanos_container {
-    text-align: center;
-    margin-top: 5%;
-  }
-
-  .cercanos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+  div{
+    flex: 1;
   }
 
   app-footer {
-    height: 10vh;
+    height: 10%;
   }
 </style>
 
 <section class="contenedor">
   <app-header></app-header>
 
-  <main>
-    <app-slider></app-slider>
-
-    <section class="cercanos_container">
-      <h1>Museos cerca de ti</h1>
-      <section class="cercanos">
-        <app-caja *ngFor="let cant of cantidad"></app-caja>
-      </section>
-    </section>
-
-  </main>
-
-
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  
 
   <app-footer></app-footer>
 </section>
