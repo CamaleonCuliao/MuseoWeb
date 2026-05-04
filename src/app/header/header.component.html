@@ -13,7 +13,15 @@
             <li>Exposiciones</li>
             <li>Noticias</li>
             <li>Contacto</li>
-            <li routerLink="/registro">Crear cuenta</li>
+            @if(cosa){
+                <li>Cuenta</li>
+                <li (click)="cerrarSesion()">Cerrar sesion</li>
+            }
+            @if(!cosa){
+                <li routerLink="/registro">Crear cuenta</li>
+                <li routerLink="/inicio">Iniciar sesion</li>
+            }
+            
         </ul>
     </nav>
 </header>

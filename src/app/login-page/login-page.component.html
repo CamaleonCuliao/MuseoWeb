@@ -1,1 +1,96 @@
-<p>login-page works!</p>
+<style>
+    main{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario_registro{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto 0 auto;
+
+        border: 5px rgb(25, 25, 25) solid;
+        border-radius: 10px;
+
+        color: white;
+        background-color: rgb(25, 25, 25);
+    }
+
+    .formulario_registro *{
+        width: 80%;
+        margin: 0 auto 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .formulario_registro h1{
+        padding-top: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+
+    form input{
+        height: 25px;
+        border: 0;
+        color: white;
+        background-color: rgb(25, 25, 25);
+        border-bottom: solid 1px white;
+        text-align: left;
+    }
+
+    form input::placeholder{
+        text-align: left;
+    }
+
+    form div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    form div input{
+        height: 15px;
+        width: auto;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    form div label{
+        width: auto;
+        margin-left: 0;
+    }
+
+    form .enviar{
+        background-color: white;
+        color: black;
+        height: 30px;
+    }
+    
+</style>
+
+<main>
+
+    <section class="formulario_registro">
+        <h1>Iniciar Sesion</h1>
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+            <input type="email" placeholder="Correo electronico" name="email" [(ngModel)]="user.email" required>
+            <input type="password" placeholder="Contraseña" name="contrasenna" [(ngModel)]="user.contrasenna" required>
+            <div>
+                <input type="checkbox">
+                <label for="">Recuerdame</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</main>

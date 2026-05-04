@@ -14,6 +14,11 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 
 export class HomeComponent{
+  museos: any[] = [];
+  monumentos: any[] = [];
+  visitas: any[] = [];
+  exposiciones: any[] = [];
+
   alturaCaja="300"
   anchuraCaja="auto"
   alturaArte="400"
@@ -23,10 +28,23 @@ export class HomeComponent{
   r1="100%"
   r2="100%"
 
-  museos: any[] = this.apiService.museos;
-  exposiciones: any[] = this.apiService.exposiciones;
-  visitas: any[] = this.apiService.visitas;
-  monumentos: any[] = this.apiService.monumentos;
-
   constructor(private apiService: ApiService) {}
+
+  ngOnInit() {    
+    this.apiService.getMuseos().subscribe(data => {
+      this.museos = data.body;
+    });
+
+    this.apiService.getExposiciones().subscribe(data => {
+      this.exposiciones = data.body;
+    });
+
+    this.apiService.getMonumentos().subscribe(data => {
+      this.monumentos = data.body;
+    });
+
+    this.apiService.getVisitas().subscribe(data => {
+      this.visitas = data.body;
+    });
+  }
 }

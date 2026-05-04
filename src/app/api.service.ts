@@ -1,19 +1,15 @@
 import { Injectable, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Interface } from 'node:readline';
+import { Observable, firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  museos: any[] = [];
-  monumentos: any[] = [];
-  visitas: any[] = [];
-  exposiciones: any[] = [];
+
   errorMessage: string = '';
 
-  private baseUrl = 'http://localhost:3000/'; // Example API URL
+  private baseUrl = 'http://192.168.18.42:3000/'; // Example API URL
   constructor(private http: HttpClient) {}
   // Getters
   getMuseos(): Observable<any> {
@@ -36,28 +32,23 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}api/monumento`);
   }
 
+  //Funciones de registro e inicio de sesion
   registerUser(user_body: any): Observable<any>{
-    return this.http.post(`${this.baseUrl}api/usuarios`, user_body);
+    return this.http.post(`${this.baseUrl}api/auth`, user_body);
   }
 
-  loadMuseos(): void {
-    this.getMuseos().subscribe(
-      (data) => {
-        this.museos = data.body;
-      },
-      (error) => {
-        console.error('Error museos:', error);
-      }
-    );
+  loginUser(user_body: any): Observable<any>{
+    return this.http.post(`${this.baseUrl}api/login`, user_body);
   }
 
+  /*
   loadExposiciones(): void {
     this.getExposiciones().subscribe(
       (data) => {
         this.exposiciones = data.body;
       },
       (error) => {
-        this.errorMessage = 'An error occurred while fetching posts.';
+        this.errorMessage = 'A ocurrido un error al cargar los archivos';
       }
     );
   }
@@ -68,7 +59,7 @@ export class ApiService {
         this.visitas = data.body;
       },
       (error) => {
-        this.errorMessage = 'An error occurred while fetching posts.';
+        this.errorMessage = 'A ocurrido un error al cargar los archivos';
       }
     );
   }
@@ -79,8 +70,8 @@ export class ApiService {
         this.monumentos = data.body;
       },
       (error) => {
-        this.errorMessage = 'An error occurred while fetching posts.';
+        this.errorMessage = 'A ocurrido un error al cargar los archivos';
       }
     );
-  }
+  }*/
 }
