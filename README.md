@@ -35,16 +35,20 @@ Aunque la mayoria de la aplicación esta escrita con php y javascript nativo, he
 * sweetalert2: Libreria de JS que ayuda mucho a mejorar la estetica de las alertas
 * swiperjs: Increible libreria de JS que ayuda a hacer sliders de todo tipo con mucha customizacion, se usa en la mayoria de sliders de la aplicación
 * jquery: Libreria de JS usada en varios casos de la pagina como:
-  * * Formularios de compra de entradas y publicar reseñas 
-  * * Slideshow de imagenes
+  *  Formularios de compra de entradas y publicar reseñas 
+  * Slideshow de imagenes
 
 ## Autor
 
 Toda la aplicación a sido diseñada y programada por mi cuenta, si tienes alguna pregunta mi email publico es alejandrogomezguillen9@gmail.com
 
+## Uso de la IA en el proyecto
+
+Mientras que he usado IA para debugear problemas con el codigo y para explicaciones teoricas cuando era necesario (En este proyecto he aprendido desde 0 que es una arquitectura MVC, como programar una API
+y funcionamientos complejos de Angular) todo el codigo que se a insertado a sido escrito manualmente, modificado para acomodarse al proyecto o insertado desde foros de internet (como Stack Overflow)
+
 ## Links y dependencias
 
-Inspiration, code snippets, etc.
 * [sweetalert2](https://sweetalert2.github.io/)
 * [swiperjs](https://swiperjs.com/)
 * [jquery](https://jquery.com/)
