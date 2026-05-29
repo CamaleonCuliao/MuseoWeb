@@ -1,0 +1,4 @@
+
+    <?php
+        renderizarTablasHelper($stm);
+    ?>

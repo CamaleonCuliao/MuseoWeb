@@ -1,0 +1,299 @@
+/* Tablet */
+@media (min-width: 768px) {
+    .main_yacimientos div img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .renderizado {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Ordenador || Desktop */
+@media (min-width: 1280px) {
+    main {
+        height: 100%;
+    }
+
+    .padre_navegacion {
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .cuenta {
+        height: 100%;
+    }
+
+    /* HEADER */
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+    }
+
+    header .menu-toggle {
+        display: none;
+    }
+
+    header .menu {
+        display: flex;
+        background-color: none;
+        border: 0;
+
+        margin-right: 5%;
+    }
+
+    header .menu ul{
+        display: flex;
+        flex-direction: row;
+        background-color: #faf7f3;
+        border: 0;
+    }
+
+    header .menu ul li {
+        border: 0;
+    }
+
+    header .menu ul li a:hover {
+        background-color: rgba(209, 209, 209, 0.486)
+    }
+
+    /* SWIPER */
+    .swiper {
+        width: 80%;
+        margin: auto;
+    }
+
+    .swiperExposiciones{
+        width: 80%;
+        margin: auto;
+    }
+
+    .swiperMonumentos{
+        width: 80%;
+        margin: auto;
+    }
+
+    .caja:hover h1 {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .caja:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .caja h1 {
+        opacity: 0;
+        justify-self: center;
+        align-self: center;
+        margin-top: auto;
+    }
+
+    .caja {
+        -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .main_intermedio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .renderizado {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .swiper-wrapper {
+        height: 200px;
+    }
+
+    .swiper-slide {
+        height: 200px;
+    }
+
+    .main_yacimientos div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main_yacimientos div img {
+        width: 100%;
+        height: 500px;
+    }
+
+    /* VISITAS */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'uno uno'
+            'dos tres';
+        align-items: start;
+
+        width: 80%;
+    }
+
+    .grid div img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .grid .uno img {
+        grid-area: uno;
+        height: 90%;
+    }
+
+    .main_visitas  p{
+        display: none;
+    }
+
+    .main_yacimientos div {
+        width: 80%;
+    }
+
+    /* NAVEGACION */
+    .navegacion form {
+        display: grid;
+
+        width: 60%;
+        margin: auto;
+    }
+
+    .navegacion form .buscar {
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    .renderizado {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    /* FORMS REGISTRO Y LOGIN */
+    .formulario_registro {
+        width: 20%;
+    }
+
+    /* DETALLES MUSEO */
+    main .informacion_museo {
+        display: grid;
+        grid-template-areas: 'uno dos tres seis'
+                             'uno cuatro cinco seis';
+        grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 columnas iguales */
+        grid-template-rows: 1fr 1fr; 
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+        width: 60%;
+        
+        margin: auto;
+
+        margin-top: 30px;
+    }
+    
+    main .informacion_museo div {
+        width: 100%;
+        height: 100%;
+    }
+
+    main .informacion_museo div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;  /* arriba en eje vertical */
+        align-items: flex-start;      /* izquierda en eje horizontal */
+    }
+
+    main .informacion_museo div img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    main .informacion_museo .uno{ grid-area: uno;}
+
+    main .informacion_museo .dos{ grid-area: dos;}
+
+    main .informacion_museo .tres{ grid-area: tres;}
+
+    main .informacion_museo .cuatro{ grid-area: cuatro;}
+
+    main .informacion_museo .cinco{ grid-area: cinco;}
+
+    main .informacion_museo .seis{ grid-area: seis;}
+
+    main .review .publicar {
+        width: 60%;
+        margin: auto;
+    }
+
+    main .review .reviews {
+        width: 60%;
+        margin: auto;
+    }
+
+    /* DETALLES GENERALES*/
+    main .informacion_general {
+        display: flex;
+        grid-template-areas: 'uno dos'
+                             'uno tres';
+        grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 columnas iguales */
+        grid-template-rows: 1fr 1fr; 
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+        width: 60%;
+        
+        margin: auto;
+
+        margin-top: 30px;
+    }
+    
+    main .informacion_museo div {
+        width: 100%;
+        height: 100%;
+    }
+
+    main .informacion_museo div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;  /* arriba en eje vertical */
+        align-items: flex-start;      /* izquierda en eje horizontal */
+    }
+
+    main .informacion_museo div img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    main .informacion_museo .uno{ grid-area: uno;}
+
+    main .informacion_museo .dos{ grid-area: dos;}
+
+    main .informacion_museo .tres{ grid-area: tres;}
+
+    main .informacion_museo .cuatro{ grid-area: cuatro;}
+
+    main .informacion_museo .cinco{ grid-area: cinco;}
+
+    main .informacion_museo .seis{ grid-area: seis;}
+
+    main .review .publicar {
+        width: 60%;
+        margin: auto;
+    }
+
+    main .review .reviews {
+        width: 60%;
+        margin: auto;
+    }
+}

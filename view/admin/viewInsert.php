@@ -1,0 +1,4 @@
+
+    <?php
+        renderizarInsertHelper($stm);
+    ?>

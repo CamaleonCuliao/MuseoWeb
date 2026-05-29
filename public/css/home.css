@@ -1,0 +1,221 @@
+main {
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* HOME */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* MAIN SLIDER */
+
+.main_slider {
+    background: url('../img/arqAlicante.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+}
+
+.murcia {
+    background: url('../img/murcia_catedral.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+}
+
+/* SLIDERS*/
+.slider {
+    width: 80%;
+    margin: auto;
+}
+
+.slider h1 {
+    text-align: center;
+}
+
+/* CAJAS */
+.caja {
+    width: 100%;
+    height: 200px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+
+/* MAIN INTERMEDIOS */
+
+.main_intermedio {
+    width: 100%;
+
+    background-color: rgb(25, 25, 25);
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_intermedio div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_intermedio div {
+    padding: 15px;
+}
+
+.main_exposiciones .caja {
+    height: 300px;
+}
+
+/* VISITAS */
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    margin: auto;
+}
+.grid div a {
+    text-decoration: none;
+    color: black;
+}
+.grid div p {
+    display: none;
+}
+.grid div img {
+    width: 100%;
+    height: auto;
+}
+
+.grid .uno {
+    grid-area: uno;
+    height: 100%;
+}
+.grid .dos {
+    grid-area: dos;
+    height: 100%;
+}
+.grid .tres {
+    grid-area: tres;
+    height: 100%;
+}
+
+/* YACIMIENTOS */
+
+.main_yacimientos {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_yacimientos a {
+    text-decoration: none;
+    color: black;
+}
+
+.main_yacimientos div {
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.main_yacimientos div .uno,
+.main_yacimientos div .dos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main_yacimientos div img {
+    width: 100%;
+    height: 200px;
+}
+
+.main_exposiciones .swiper-slide {
+    padding: 0 5px;
+}
+
+/* EXPOSICIONES */
+
+.main_exposiciones .caja {
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+}
+
+.swiperExposiciones {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiperExposiciones .swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiperExposiciones .swiper-slide {
+    width: auto;
+    flex-shrink: 0;
+}
+
+/* MONUMENTOS y mas ?*/
+.swiperMonumentos {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiperMonumentos .swiper-wrapper {
+    align-items: stretch;
+    height: 600px;
+}
+
+.swiperMonumentos .swiper-slide {
+    width: auto;
+    flex-shrink: 0;
+}
+
+.swiper-slide {
+    height: 200px;
+    width: 100vh;
+}
+
+.swiper .swiper-wrapper {
+    align-items: stretch;
+    height: 200px;
+}
