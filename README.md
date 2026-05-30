@@ -52,3 +52,23 @@ y funcionamientos complejos de Angular) todo el codigo que se a insertado a sido
 * [sweetalert2](https://sweetalert2.github.io/)
 * [swiperjs](https://swiperjs.com/)
 * [jquery](https://jquery.com/)
+
+# Documentación
+
+Aqui dejo la documentación de las clases y funciones mas importantes del proyecto, junto a diagramas cuando sea necesario
+
+## Documentación JavaScript
+
+Los archivos mas importantes se encuentran en /public/scripts, en el resto del proyecto existen algunas lines de js sueltas (como el slideshow de imagenes en home.php)
+
+* Clase comprobador
+Se encuentra en /public/scripts/control.js, se encarga de la comprobación de formularios para la pagina web (crear reseña, comprar entradas, crear cuenta e iniciar sesion) contiene las
+siguientes funciones:
+
+ *validarFormulario - Comprueba todos los errores que se han almacenado, luego los muestra por pantalla con un alert de sweetalert2
+ *validarInputs - Valida si un input individual esta vacio
+ *comprobarFormularios, comprobarTickets, comprobarReseña, comprobarRegistro - Funciones especificas para diferentes formularios de la aplicación
+
+* alert.js
+En este archivo se juntan todas las alertas de sweetalert2 que se usan en la pagina, todas las funciones se exportan y luego se van importando en las diferentes partes de la pagina donde se necesiten.
+Las funciones siguen la misma logica, notifican el error y luego redirigen al usuario con .then()
