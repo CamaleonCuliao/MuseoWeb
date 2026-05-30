@@ -64,6 +64,7 @@ Si detecta que el controlador o metodo indicado no existe o devuelve un error (c
 
 Aqui dejo un diagrama explicando el funcionamiento del router:
 
+![router](public/docs/router_museo_web.jpg)
 
 ## Documentación JavaScript
 
