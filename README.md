@@ -35,7 +35,7 @@ Aunque la mayoria de la aplicación esta escrita con php y javascript nativo, he
 * sweetalert2: Libreria de JS que ayuda mucho a mejorar la estetica de las alertas
 * swiperjs: Increible libreria de JS que ayuda a hacer sliders de todo tipo con mucha customizacion, se usa en la mayoria de sliders de la aplicación
 * jquery: Libreria de JS usada en varios casos de la pagina como:
-  *  Formularios de compra de entradas y publicar reseñas 
+  * Formularios de compra de entradas y publicar reseñas 
   * Slideshow de imagenes
 
 ## Autor
@@ -57,6 +57,14 @@ y funcionamientos complejos de Angular) todo el codigo que se a insertado a sido
 
 Aqui dejo la documentación de las clases y funciones mas importantes del proyecto, junto a diagramas cuando sea necesario
 
+## Documentación de router.php
+Al usar una arquitecutra MVC, el proyecto usa un router para construir de forma dinamica los links que llaman a un controlador y a su metodo indicado (que son archivos de php)
+
+Si detecta que el controlador o metodo indicado no existe o devuelve un error (como falta de permisos) se le notifica al usuario y se devuelve al indice de la pagina
+
+Aqui dejo un diagrama explicando el funcionamiento del router:
+
+
 ## Documentación JavaScript
 
 Los archivos mas importantes se encuentran en /public/scripts, en el resto del proyecto existen algunas lines de js sueltas (como el slideshow de imagenes en home.php)
@@ -65,10 +73,11 @@ Los archivos mas importantes se encuentran en /public/scripts, en el resto del p
 Se encuentra en /public/scripts/control.js, se encarga de la comprobación de formularios para la pagina web (crear reseña, comprar entradas, crear cuenta e iniciar sesion) contiene las
 siguientes funciones:
 
- *validarFormulario - Comprueba todos los errores que se han almacenado, luego los muestra por pantalla con un alert de sweetalert2
- *validarInputs - Valida si un input individual esta vacio
- *comprobarFormularios, comprobarTickets, comprobarReseña, comprobarRegistro - Funciones especificas para diferentes formularios de la aplicación
+ * validarFormulario: Comprueba todos los errores que se han almacenado, luego los muestra por pantalla con un alert de sweetalert2
+ * validarInputs: Valida si un input individual esta vacio
+ * comprobarFormularios, comprobarTickets, comprobarReseña, comprobarRegistro: Funciones especificas para diferentes formularios de la aplicación
 
 * alert.js
 En este archivo se juntan todas las alertas de sweetalert2 que se usan en la pagina, todas las funciones se exportan y luego se van importando en las diferentes partes de la pagina donde se necesiten.
 Las funciones siguen la misma logica, notifican el error y luego redirigen al usuario con .then()
+
